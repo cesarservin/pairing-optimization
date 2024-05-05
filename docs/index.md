@@ -9,7 +9,7 @@ You can click on them to navigate to the different sections.
 
 This project is a `solution` to the business problem of reducing `excess` products or creating new products from pairing up existing ones. It uses a sample data source that resembles a dataset in the business. The techniques used require knowledge of matrix algebra and general data cleaning practices.
 
-![Pairs](img\suggestion.jpg)
+![Pairs](img/suggestion.jpg)
 
 ## Algorithms
 

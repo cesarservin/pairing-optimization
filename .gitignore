@@ -325,5 +325,6 @@ pip-selfcheck.json
 #   git rm -r .ipynb_checkpoints/
 
 # data
-data/
+*.xlsx
+*.csv
 
