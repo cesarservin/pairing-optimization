@@ -43,7 +43,8 @@ plugins:
             show_root_heading: true
 
 nav: # Setting up the navigation. Te below list will be tabs on left panel
-  - Home: index.md
+  - Data Science Portfolio: https://cesarservin.com/
+  - Project: index.md
   - Packages:
     - Data: data.md
     - Algorithms: algorithm.md  # A markdown to list all the data related operations
