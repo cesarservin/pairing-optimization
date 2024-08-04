@@ -1,13 +1,9 @@
 Pairing Optimization
 ==============
 
-## Navigation
-⬅️ In the left hand side you can see the different sections of your documentation. 
-You can click on them to navigate to the different sections.
-
 ## Overview
 
-This project is a `solution` to the business problem of reducing `excess` products or creating new products from pairing up existing ones. It uses a sample data source that resembles a dataset in the business. The techniques used require knowledge of matrix algebra and general data cleaning practices.
+This project is a `solution` to the business problem of reducing `excess` products or creating new products from `pairing up existing ones`. It uses a sample data source that resembles a dataset in the business. 
 
 ![Pairs](img/suggestion.jpg)
 
@@ -33,7 +29,7 @@ To use the project, you will need to have a sample data file in the same directo
 
 
 ## Result ✅
-This will generate a report that shows the number of assortments/kits/bundles/sets that can be generated, as well as the maximum amoutn of continous combinations.
+This will generate a report that shows the number of assortments/kits/bundles/sets that can be generated, as well as the maximum amounts of continous combinations.
 
 Directory Structure
 ==============

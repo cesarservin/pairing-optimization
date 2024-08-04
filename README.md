@@ -1,167 +1,124 @@
 # pairing-optimization
 
-# Quickstart guide
-### ⚠️ Follow the next instructions inside your project folder ⚠️
+## Description
+What `problem` does it `solve`?
+
+This project is a `solution` to the business problem of reducing `excess` products or creating new products from `pairing up existing ones`. It uses a sample data source that resembles a dataset in the business. 
 
 
-### To install the package `po` in your local environment:
+![Pairs](docs/img/suggestion.jpg)
 
-**You must have Python 3.10 or later**. Ideally, you use Python 3.11.
-1. If Hatch is not already **installed**, install it: `pip install hatch`
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
-2.  **Clone** `pairing-optimization`
-3. Type **insde your project folder terminal**:
-    > `hatch shell` (in your laptop)
-
-    **That's it! You can now use your package in your local environment.**
-
-4.  To **run** the project use `notebooks\*-main.ipynb`
+[![View Project](https://img.shields.io/badge/Material-View_Project-purple?logo=MaterialforMKDOCS)](https://cesarservin.com/pairing-optimization/index.html)
+[![Open Notebook](https://img.shields.io/badge/Jupyter-Open_Notebook-blue?logo=Jupyter)](https://github.com/cesarservin/pairing-optimization/blob/main/notebooks/main.ipynb)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/cesarservin/pairing-optimization)
 
 
-## (Optional) Configure VS Code and Jupyter to recognize your Python package
 
-After a successful installation with hatch, type:
-> `conda deactivate` (if you are using conda)
->
->`hatch shell`
->
-> `hatch run python -m ipykernel install --user --name po`
+## Table of contents
 
-
-## (Optional) Configure PyCharm to recognize your Python package
-
-Alternatively, you can use the following command to find the location of your hatch environment:
-
-- `hatch shell`
-- `hatch run python -c "import sys;print(sys.executable)"`
-
-The first command activates the environment, the second command tells you the location of the environment.
-
-
-# Code documentation
-
-Your environment comes with `mkdocs` configured for you. To generate the documentation you can run the following command:
-
-`hatch run docs:build`
-
-This will create a `site` folder in the root directory of the project
-
-Alternatively, you can run the following command to see the documentation in your browser:
-
-`hatch run docs:serve`
-or
-`mkdocs serve`
+- [pairing-optimization](#pairing-optimization)
+  - [Description](#description)
+  - [Table of contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Data](#data)
+  - [Model](#model)
+  - [Results](#results)
+  - [Examples](#examples)
+  - [Documentation](#documentation)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Roadmap](#roadmap)
+  - [Enhancements](#enhancements)
+  - [Acknowledgments](#acknowledgments)
+  - [Changelog](#changelog)
 
 
-## How is the documentation generated?
+## Installation
 
-The code documentation is generated using Google style docstrings. You can find more information 
-about it [here](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
+⚠️ Follow the next instructions inside your project folder
 
-You can even configure your IDE to follow Google style docstrings.
+1. **Prerequisites**:
+   - To install the project `pairing-optimization` in your local environment
+**you must have Python 3.10 or later**. Ideally, you use Python 3.11.
+1. **Setup**:
+   - If Hatch is not already **installed**, install it: `pip install hatch`
+   - To activate your environment with `pairing-optimization` type **inside your project folder**:
+`hatch shell` 
 
-After writing your docstrings, you need to reference them using the `:::` directive. An example is already provided
-to you in the `docs` folder.
+**That's it! You can now use your package in your local environment.**
 
-It is also possible to add or remove sections from the documentation. You can do that by modifying 
-the `mkdocs.yml` file.
+## Usage
+- **Basic Usage**: Use `main.ipynb`
+- **Configuration**: Modify pyproject.toml to add or remove packages.
 
-## FAQ (Docs)
-<details>
-  <summary><i>How does the docs generation work?</i></summary>
-When you run `hatch run docs:build`, it will run the following command:
+## Data
+- **Sources**: The dataset is synthetic generated.
+- **Structure**: Table of key parameters.
 
-- `mkdocs build`
+| constraints | component | resource |
+|-------------|-----------|----------|
+| Brand 1     | PANT      | 3        |
 
-</details>
+    constraints: product or item features
+    component: components that makes up the pair
+    resource: numeric / quantities of the products
 
-<details>
-    <summary>How can I add or remove a section in the left navigation bar?</summary>
-These sections are defined in the `mkdocs.yml` file. You can add or remove sections by modifying this file.
-</details>
+## Model
 
-<details>
-    <summary>How can I customize the documentation?</summary>
-We recommend that you use our guidelines. However, you can customize the documentation by taking a 
-look at the `mkdocs` documentation [here](https://www.mkdocs.org/).
-</details>
+- **Algorithms**: Methods used.
+    - Linear Algebra and reshaping of datasets.
 
-# Linting and formatting
+## Results
 
-Your project comes with a suggested configuration for `ruff` which is a linter and formatter that is replacing pylint,
-flake8, and black.
+ - **Findings:**
+   - This interactable tool in D3 returns total number of combinations of products and maximum number of continous combinations. This will not return estimation but actual combinations based on parameters.
 
-To use it you can run the following command:
+- **Visualizations**:
+  - Example visualization
 
-`hatch fmt`
+![Pairs](/docs/img/pairing_optimization_tool.jpg)
 
-This will detect linting issues and if possible fix them. If there are issues that cannot be fixed automatically, 
-you will get a message with the line number and the issue. 
+## Examples
 
-The formatter runs automatically after the linting process finishes. The configuration resembles `black`.
+```python
+from po.data.readingdata import file_path_finder
+from po.features.pairing_optimization import po
+from po.features.pairing_optimization import max_streak
+```
 
-## FAQ (Linting and formatting)
 
-<details>
-  <summary><i>How does the `hatch fmt` work?</i></summary>
-When you run `hatch fmt`, it will run the following command:
+## Documentation
 
-- `ruff check --fix`
-- `ruff format`
+[Documentation](https://cesarservin.com/pairing-optimization/index.html)
 
-</details>
-<details>
-  <summary><i>How can I configure the linter and formatter?</i></summary>
-You can configure the linter and formatter by modifying the `pyproject.toml` file in the `[tool.ruff]` section.
-Take a look at the [ruff documentation](https://docs.astral.sh/ruff/) for more information.
-</details>
-<details>
-<summary>Can I use ruff directly?</summary>
 
-**Yes!** You can use ruff directly by running `ruff check` or `ruff format` in your terminal. Make sure 
-you are in the hatch shell.
+## Contributing
 
-</details>
+To contribute create a PR a use conventional [commits](https://www.conventionalcommits.org/en/v1.0.0/#summary)
 
-# Pre-commit hooks
+```
+fix: <description>
+feat: <description>
+docs: <description>
+refactor: <description>
+```
+## License
+[License](./LICENSE) information.
 
-This project comes with pre-commit hooks preconfigured. If you want to enable them,
-type:
+## Roadmap
 
-`pre-commit install`
+- Generate pairs using clustering algorithms.
 
-This will install the pre-commit hooks in your project and **at every commit the hooks will run**. 
+## Enhancements
+OuOther potential future work that can be done to extend the project is create interactive Power BI dashboard.
 
-You can also run the pre-commit hooks manually by typing:
+## Acknowledgments
 
-`pre-commit run --all-files`
+Inspired by experience.
 
-The pre-commit hooks will run the following checks:
-
-- check-yaml
-- end-of-file-fixer
-- trailing-whitespace
-- ruff
-- pretty-format-yaml
-- pretty-format-toml
-- bandit
-
-## FAQ (Pre-commit hooks)
-
-<details>
-  <summary><i>How can I skip the pre-commit hooks?</i></summary>
-You can skip the pre-commit hooks by adding the `--no-verify` flag to your git commit command. For example:
-`git commit -m "My commit message" --no-verify`
-</details>
-
-# FAQ
-
-What if I want to add a new Python package?
-
-> Install it as always via `pip` in your hatch environment (`hatch shell`). 
-> Don't forget to add it to the `pyproject.toml` file in the `dependencies` section.
-> Alternatively, you can exit your environment (`exit`) and add it to the `pyproject.toml`, the 
-> next time you restart your hatch environment it will be installed.
-
-# Contribute
-To contribute create a PR a use conventional commits https://www.conventionalcommits.org/en/v1.0.0/#summary
+## Changelog
+- v1.0: Initial release
+- v1.1: Added visualization/tool and improved model performance.
