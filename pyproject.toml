@@ -13,17 +13,18 @@ classifiers = [
 dependencies = [
   "pandas",
   "jupyter",
-  "matplotlib",
-  "seaborn",
+  "pydantic",
   "hatch",
   "openpyxl",
   "mkdocs-material",
   "mkdocstrings-python",
-  "mkdocs-glightbox"
+  "mkdocs-glightbox",
+  "pyinstaller"
 ]
 description = ''
 dynamic = ["version"]
 keywords = []
+license-files = {paths = ["LICENSE"]}
 name = "po"
 readme = "README.md"
 requires-python = ">=3.10"

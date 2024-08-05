@@ -1,4 +1,4 @@
-Pairing Optimization
+Documentation
 ==============
 
 ## Overview
@@ -6,6 +6,7 @@ Pairing Optimization
 This project is a `solution` to the business problem of reducing `excess` products or creating new products from `pairing up existing ones`. It uses a sample data source that resembles a dataset in the business. 
 
 ![Pairs](img/suggestion.jpg)
+
 
 ## Algorithms
 
@@ -48,11 +49,17 @@ Directory Structure
 
 **Contributing**
 
-If you would like to contribute to the project, please fork the repository and submit a pull request.
-To contribute create a pull request and use conventional commits [here](https://www.conventionalcommits.org/en/v1.0.0/#summary)
+To contribute create a PR a use conventional [commits](https://www.conventionalcommits.org/en/v1.0.0/#summary)
+
+```
+fix: <description>
+feat: <description>
+docs: <description>
+refactor: <description>
+```
 
 **License**
 
 The project is licensed under the MIT License.
 
-I hope this is helpful!
+I hope this is helpful! 😄
