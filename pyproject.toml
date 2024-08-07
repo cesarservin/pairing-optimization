@@ -3,7 +3,6 @@ build-backend = "hatchling.build"
 requires = ["hatchling"]
 
 [project]
-
 classifiers = [
   "Programming Language :: Python",
   "Programming Language :: Python :: 3.10",
@@ -133,7 +132,17 @@ pythonpath = [
 testpaths = "tests"
 
 [tool.ruff]
-exclude = [".venv", ".hatch", ".git", ".pipelines", "tests", "wiki", ".idea"]
+exclude = [
+  ".venv",
+  ".hatch",
+  ".git",
+  ".pipelines",
+  "tests",
+  "wiki",
+  ".idea",
+  "*.yml",
+  "*.yaml"  # Include this if you also want to exclude .yaml files
+]
 line-length = 120
 target-version = "py310"
 

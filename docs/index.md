@@ -3,7 +3,7 @@ Documentation
 
 ## Overview
 
-This project is a `solution` to the business problem of reducing `excess` products or creating new products from `pairing up existing ones`. It uses a sample data source that resembles a dataset in the business. 
+This project is a `solution` to the business problem of reducing `excess` products or creating new products from `pairing up existing ones`. It uses a sample data source that resembles a dataset in the business.
 
 ![Pairs](img/suggestion.jpg)
 

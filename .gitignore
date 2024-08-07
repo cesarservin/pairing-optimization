@@ -327,4 +327,4 @@ pip-selfcheck.json
 # data
 *.xlsx
 *.csv
-
+*.sqlite
